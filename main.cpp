@@ -272,13 +272,13 @@ int main() {
         }
     }
     auto start = std::chrono::steady_clock::now();
-    // naiveMatlul(A, B, C, N); //86.3325 million operations per second aka 0.086 GFLOPS
-    // cachedNaiveMatMul(A, B, C, N); //5.1 GFLOPS
-    // cachedNaiveMatMulParallel(A, B, C, N); // 14.4 GFLOPS
-    // cachedTiledMatMulParallel(A, B, C, N, 32); //37.2 GFLOPS
-    // cachedTiledMatMulParallelAlligned(A, B, C, N, 32, STRIDE); // 43 GFLOPS
-    // cachedTiledMatMulAVX(A, B, C, N, 32, STRIDE); //74 GFLOPS
-    cachedTiledMatMulAVX_Ultimate(A, B, C, N, 32, STRIDE); //118 GFLOPS (95% of theoretical max)
+    // naiveMatlul(A, B, C, N); //86.3325 million operations per second aka 0.086 GIOPS
+    // cachedNaiveMatMul(A, B, C, N); //5.1 GIOPS
+    // cachedNaiveMatMulParallel(A, B, C, N); // 14.4 GIOPS
+    // cachedTiledMatMulParallel(A, B, C, N, 32); //37.2 GIOPS
+    // cachedTiledMatMulParallelAlligned(A, B, C, N, 32, STRIDE); // 43 GIOPS
+    // cachedTiledMatMulAVX(A, B, C, N, 32, STRIDE); //74 GIOPS
+    cachedTiledMatMulAVX_Ultimate(A, B, C, N, 32, STRIDE); //118 GIOPS (95% of theoretical max)
     auto end = std::chrono::steady_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     std::cout << "Elapsed time: " << elapsed.count() << " ms\n";
