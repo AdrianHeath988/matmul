@@ -8,4 +8,5 @@ Implements several naive and more accelerated CPU matmul implementations along w
 - cachedTiledMatMulAVX at 74 GIOPS
 - cachedTiledMatMulAVX_Ultimate at 118 GIOPS (~95% of theoretical max)
 - simple naive matmul kernel does 370 GIOPs on GeForce RTX 5060 (Blackwell architecture)
+
 If you have suggestions or other benchmarks, feel free to add :)
